@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* General Styles */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: #fefae0; /* Lightest color for background */
+  color: #283618; /* Dark text color */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #023047; /* Dark Blue */
+    padding: 1rem 2rem;
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffb703; /* Bright Yellow */
+    margin: 4px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #ffffff; /* White Text */
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-menu li a:hover {
+    color: #fb8500; /* Orange */
+}
+
+/* Responsive Menu */
+.show {
+    display: block !important;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url(mini\ project/pexels-athena-2582931.jpg);
+ background-position: center;
+ background-size: cover;
+    color: #fdf0d5;
+    text-align: left;
+    padding: 80px 40px;
+    margin-top: 10px;
+    height: 60vh;
+}
+
+.hero-content h1 {
+    margin: 0;
+    
+    font-size: 100px;
+    top: 100px;
+}
+
+/* Service Section */
+.service-section {
+  padding: 60px 20px;
+  background-color: #fefae0; /* Light background color */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #dda15e; /* Card background color */
+  color: #283618; /* Text color */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #283618; /* Icon color */
+}
+
+.product-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.product-card p {
+  margin-bottom: 20px;
+  color: #283618;
+}
+
+.product-card .btn {
+  background-color: #606c38; /* Button background color */
+  color: #fefae0; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-card .btn:hover {
+  background-color: #bc6c25; /* Button hover color */
+}
+
+/* Footer */
+.footer {
+    background-color: #023047; /* Dark Blue */
+    color: #ffffff; /* White Text */
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-section {
+    background-color: #219ebc; /* Blue */
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-content h2 {
+    color: #ffffff; /* White Text */
+    margin-bottom: 1rem;
+}
+
+.contact-button {
+    background-color: #ffb703; /* Bright Yellow */
+    color: #023047; /* Dark Blue Text */
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #fb8500; /* Orange */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.footer-logo img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.footer-social a {
+    margin: 0 0.5rem;
+    color: #ffb703; /* Bright Yellow */
+    font-size: 1.5rem;
+}
+
+.footer-social a:hover {
+    color: #fb8500; /* Orange */
+}
+
+.footer-links,
+.footer-column {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.footer-column h4 {
+    color: #ffb703; /* Bright Yellow */
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White Text */
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffb703; /* Bright Yellow */
+}
+
+.footer-bottom {
+    background-color: #023047; /* Dark Blue */
+    padding: 1rem;
+    color: #ffffff; /* White Text */
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        right: 0px;
+        background-color: #023047; /* Dark Blue */
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+  .navbar.open .navbar-menu {
+    display: flex;
+  }
+.hero-content h1{
+    font-size: 60px;
+}
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+ 
+}
+
+
+
+
+
+</style>
+<body>
+    <!-- Navbar -->
+    <header>
+       
+        <div class="navbar">
+           
+                <img src="al shabab logo.jpg" alt="Al shabab Logo" class="logo">
+    
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index (5).html">Home</a></li>
+                <li><a href="index (2).html">Products</a></li>
+                <li><a href="index (4).html">Services</a></li>
+                <li><a href="index (3).html">About us</a></li>
+                <li><a href="index (1).html">Contact us</a></li>
+            </ul>
+        </div>
+       
+        
+          
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Services</h1>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="product-card">
+                <div class="icon">
+                    <i class="fa-solid fa-volume-low"></i>
+                </div>
+                <h2>AUDIO VISUAL SOLUTION</h2>
+                <p>Discover our range of IT products, from software to hardware, designed to enhance your business operations.</p>
+                <button class="btn">Explore Now</button>
+            </div>
+            <div class="product-card">
+                <div class="icon">
+                    <i class="fas fa-satellite-dish"></i>
+                </div>
+                <h2>NETWORK CABLING</h2>
+                <p>Protect your assets with our advanced security systems, including CCTV, alarms, and access controls.</p>
+                <button class="btn">Explore Now</button>
+            </div>
+            <div class="product-card">
+                <div class="icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h2>SECURITY SOLUTION</h2>
+                <p>Stay connected with our communication products, featuring the latest in networking technology.</p>
+                <button class="btn">Explore Now</button>
+            </div>
+            <div class="product-card">
+                <div class="icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h2>MAINTAINENCE SERVICE SUPPORT</h2>
+                <p>Build a robust network with our range of networking products, from routers to switches.</p>
+                <button class="btn">Explore Now</button>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <section class="contact-section">
+            <div class="contact-content">
+                <h2>GET IN TOUCH WITH US TODAY!</h2>
+                <a href="#contact" class="contact-button">CONTACT US</a>
+            </div>
+        </section>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://i.ibb.co/w4pQGxG/al-shabab-logo.jpg" alt="Tech Electronics Logo">
+                <p>AS TECH</p>
+            </div>
+            <div class="footer-social">
+                <p>Social</p>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                
+                
+            </div>
+            <div class="footer-column">
+                <h4>Industries</h4>
+                <ul>
+                    <li><a href="#">Commercial</a></li>
+                    <li><a href="#">Construction</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Government</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Industrial</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Locations</h4>
+                <ul>
+                    <li><a href="#">Deira,Dubai-UAE</a></li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <!-- <img src="apex-award.png" alt="AVIXA Apex Award Logo"> -->
+        <p>&copy; 2024 Tech Electronics.</p>
+    </div>
+</footer>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navbarMenu = document.getElementById('navbar-menu');
+
+    hamburger.addEventListener('click', () => {
+        navbarMenu.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>

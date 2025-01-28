@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AS TECHNO</title>
+    <link rel="stylesheet" href="">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body {
+    background-color: #fefae0; /* Light background color */
+    color: #283618; /* Dark text color */
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+/* header section*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #023047; /* Dark Blue */
+    padding: 1rem 2rem;
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffb703; /* Bright Yellow */
+    margin: 4px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #ffffff; /* White Text */
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-menu li a:hover {
+    color: #fb8500; /* Orange */
+}
+
+/* Responsive Menu */
+.show {
+    display: block !important;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        right: 0px;
+        background-color: #023047; /* Dark Blue */
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+  
+}
+
+
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #fefae0; /* Light color for hero text */
+}
+
+.hero-content h1 {
+    font-size: 7rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #fefae0;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1 1 60%;
+    max-width: 600px;
+}
+
+.about-text h2 {
+    background-color: #283618; /* Dark background for heading */
+    color: #fefae0; /* Light text color */
+    padding: 10px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #283618;
+    line-height: 1.6;
+}
+
+.about-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.about-button {
+    background-color: #606c38; /* Button background color */
+    color: #fefae0; /* Button text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.about-button:hover {
+    background-color: #bc6c25; /* Button hover color */
+}
+
+/* Testimonial Section */
+.testimonial {
+    flex:   35%;
+    max-width: 400px;
+    background-color: #fefae0;
+    padding: 20px;
+    border-left: 3px solid #606c38; /* Green color for testimonial left border */
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.author {
+    font-weight: bold;
+    text-align: right;
+}
+.footer {
+    background-color: #023047; /* Dark Blue */
+    color: #ffffff; /* White Text */
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-section {
+    background-color: #219ebc; /* Blue */
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-content h2 {
+    color: #ffffff; /* White Text */
+    margin-bottom: 1rem;
+}
+
+.contact-button {
+    background-color: #ffb703; /* Bright Yellow */
+    color: #023047; /* Dark Blue Text */
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #fb8500; /* Orange */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.footer-logo img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.footer-social a {
+    margin: 0 0.5rem;
+    color: #ffb703; /* Bright Yellow */
+    font-size: 1.5rem;
+}
+
+.footer-social a:hover {
+    color: #fb8500; /* Orange */
+}
+
+.footer-links,
+.footer-column {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.footer-column h4 {
+    color: #ffb703; /* Bright Yellow */
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White Text */
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffb703; /* Bright Yellow */
+}
+
+.footer-bottom {
+    background-color: #023047; /* Dark Blue */
+    padding: 1rem;
+    color: #ffffff; /* White Text */
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-left: 100px;
+    }
+
+    .about-text, .testimonial {
+        flex: 1 1 100%;
+        max-width: none;
+        text-align: center;
+    }
+
+    .testimonial {
+        border-left: none;
+        border-top: 3px solid #606c38; /* Adjusted border for mobile */
+        margin-top: 20px;
+    }
+}
+
+</style>
+
+<body>
+    <header>
+       
+        <div class="navbar">
+           
+                <img src="mini project/al shabab logo.jpg" alt="Al shabab Logo" class="logo">
+    
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index (5).html">Home</a></li>
+                <li><a href="index (2).html">Products</a></li>
+                <li><a href="index (4).html">Services</a></li>
+                <li><a href="index (3).html">About us</a></li>
+                <li><a href="index (1).html">Contact us</a></li>
+            </ul>
+        </div>
+       
+        
+          
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="mini project/building.jpg" alt="Company Image" class="hero-image">
+        <div class="hero-content">
+            <h1>About Us</h1>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>ABOUT AS TECHNO</h2>
+                <p>
+                    We offer exceptional services and solutions to help your business thrive, combining advanced technology with unparalleled customer service.
+                </p>
+                <p>
+                    AS TECHNO specializes in providing top-notch solutions for audio-visual systems, networking, security, and control systems to elevate your business operations. Our approach ensures that each solution is tailored to meet your specific needs, delivering spectacular experiences that foster success in business relationships.
+                </p>
+             
+            </div>
+            <div class="testimonial">
+                <p class="quote">
+                    "AS TECHNO has consistently delivered outstanding service and technical solutions. Their expertise and attention to detail have been crucial to our projects' success."
+                </p>
+                <p class="author">John Doe<br>CEO, Tech Partner Ltd.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <section class="contact-section">
+            <div class="contact-content">
+                <h2>GET IN TOUCH WITH US TODAY!</h2>
+                <a href="#contact" class="contact-button">CONTACT US</a>
+            </div>
+        </section>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://i.ibb.co/w4pQGxG/al-shabab-logo.jpg" alt="Tech Electronics Logo">
+                <p>AS TECH</p>
+            </div>
+            <div class="footer-social">
+                <p>Social</p>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                
+                
+            </div>
+            <div class="footer-column">
+                <h4>Industries</h4>
+                <ul>
+                    <li><a href="#">Commercial</a></li>
+                    <li><a href="#">Construction</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Government</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Industrial</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Locations</h4>
+                <ul>
+                    <li><a href="#">Deira,Dubai-UAE</a></li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <!-- <img src="apex-award.png" alt="AVIXA Apex Award Logo"> -->
+        <p>&copy; 2024 Tech Electronics.</p>
+    </div>
+</footer>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navbarMenu = document.getElementById('navbar-menu');
+
+    hamburger.addEventListener('click', () => {
+        navbarMenu.classList.toggle('show');
+    });
+</script>
+
+
+</body>
+
+</html>
