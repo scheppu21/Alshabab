@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo img{
+    width: 60px;
+}
+
+header .chip {
+    width: 60px;
+}
+   
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e3f2fd;
+}
+.container{
+    position: relative;
+    background-image: url(bg.png);
+    background-size: cover;
+    padding: 25px;
+    border-radius: 25px;
+    max-width: 380px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+h5{
+    color: aliceblue;
+    margin: 20px;
+    font-weight:500;
+    font-size: 14px;
+
+}
+h6{
+    color: antiquewhite;
+    font-size: 14px;
+    font-weight: 400;
+}
+.card-details .name{
+    margin-top: 20px;
+}
+
+
+
+
+
+header,
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.container .card-details{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    align-items: flex-end;
+
+}

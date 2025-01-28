@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: blueviolet;
+
+}
+form h1{
+  padding: 0px 20px;
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+form label {
+  font-size: 26px;
+}
+form input {
+  background-color: green;
+  color: black;
+  display: flex;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: aliceblue;
+
+}
+form input:hover{
+  background-color: black;
+
+
+}
+form{
+  padding: 10px 20px;
+  border: 2px solid ;
+  background-color: transparent;
+
+}

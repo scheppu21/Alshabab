@@ -1,0 +1,126 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+nav{
+ 
+ padding: 20px 5px;
+ width: 100%;
+ position: fixed;
+ z-index: 12;
+
+}
+nav .menu {
+    justify-content: space-between;
+   max-width:  1250px;
+   margin: auto;
+   display: flex;
+   align-items: center;
+   padding: 0px 20px; 
+}
+ .container-fluid  a{
+   text-decoration: none;
+   color: aliceblue;
+   font-size: 45px;
+   font-weight: 500;
+
+}
+ .container-fluid a span{
+    color: red;
+}
+ 
+
+
+
+
+
+
+.menu ul  {
+    display: inline-flex;
+    
+}
+.menu ul li {
+    list-style: none;
+    margin: 0px 10px;
+    
+}
+ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: beige;
+    transition:all 0.3s ease;
+    
+    padding:10px 10px ;
+    border-radius: 5px;
+}
+ul li a:hover{
+    background:whitesmoke;
+    color: black;
+}
+.img{
+    background: url(forest.jpg)no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    -webkit-filter: blur(3px);
+    
+}
+.img::before{
+content: "";
+position: absolute;
+height: 100%;
+width: 100%;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 20px;
+    width: 100%;
+    text-align: center;
+}
+.center .title{
+    color: aliceblue;
+    font-size: 50px;
+    font-weight: 500;
+
+}
+.center .title span{
+    color: red;
+}
+.center .sub-title{
+    color: aliceblue;
+    font-size: 40px;
+    font-weight: 400;
+}
+.center .sub-title span{
+    color: red;
+}
+.center .btns{
+    margin-top: 20px;
+}
+.center .btns button{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    margin: 0px 15px;
+    border: 2px solid white;
+    font-size: 25px;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+
+}
+.center .btns button:hover{
+    background: brown;
+    color: aliceblue;
+
+}
+
+

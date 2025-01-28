@@ -1,0 +1,85 @@
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fdfdfd;
+}
+
+.invitation-card {
+    width: 600px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+img .invitation-card{
+    width: 10px;
+    height: 10px;
+    display: flex;
+    
+    
+    
+}
+
+
+
+    
+
+
+.flower-bottom {
+    background-image: url('path-to-flower-image-bottom'); /* Replace with the image path */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.date-time {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.date, .time {
+    text-align: center;
+}
+
+.date span {
+    display: block;
+}
+
+.day {
+    font-size: 40px;
+    font-weight: bold;
+}
+
